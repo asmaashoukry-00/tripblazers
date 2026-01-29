@@ -1,0 +1,45 @@
+/* Smoothly handle initial state before JS kicks in */
+section > div {
+    will-change: transform, opacity;
+}
+
+/* Luxury cursor or interactive elements can be added here */
+html {
+    scroll-behavior: smooth;
+}
+#preloader {
+    position: fixed;
+    inset: 0;
+    background-color: #fcfbf8; /* خلفية فاتحة راقية */
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* الهالة الضوئية المتحركة خلف اللوجو */
+.background-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    /* لون رملي ذهبي غامق ودافئ */
+    background: radial-gradient(circle, rgba(166, 124, 82, 0.25) 0%, rgba(252, 251, 248, 0) 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 1;
+    opacity: 0;
+}
+
+.loader-container {
+    position: relative;
+    z-index: 10;
+}
+
+.luxury-logo img {
+    width: 320px; /* حجم اللوجو */
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(139, 101, 52, 0.15));
+    opacity: 0;
+    transform: scale(0.9);
+}
