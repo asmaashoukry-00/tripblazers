@@ -569,6 +569,314 @@
             font-weight: 300;
             letter-spacing: 0.05em;
         }
+        /* ------------- */
+        /* --- Desert Light Story Section --- */
+.story-light-immersive {
+    position: relative;
+    padding: 120px 0;
+    background: #fdfaf6; /* لون رمال فجر فاتح جداً */
+    overflow: hidden;
+}
+
+/* خلفية متموجة خفيفة جداً */
+.sand-ripple-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.story-header-center {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.heritage-label {
+    text-transform: uppercase;
+    letter-spacing: 0.7em;
+    font-size: 10px;
+    color: #b08d79;
+    font-weight: 800;
+}
+
+.heritage-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #43342d;
+    line-height: 1.1;
+    margin-top: 20px;
+}
+
+.sand-stroke {
+    font-style: italic;
+    color: #c4a484; /* لون رملي دافئ */
+}
+
+/* نقاط فاصلة فخمة */
+.luxury-dot-separator {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.luxury-dot-separator span {
+    width: 4px;
+    height: 4px;
+    background: #c4a484;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* Story Cards */
+.story-steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.heritage-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(196, 164, 132, 0.2);
+    padding: 40px 30px;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.heritage-card:hover {
+    background: #fff;
+    box-shadow: 0 30px 60px rgba(196, 164, 132, 0.15);
+    transform: translateY(-10px);
+    border-color: #c4a484;
+}
+
+.card-count {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: #e3d5ca;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.card-image-wrap {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(30%);
+    transition: transform 1.2s ease;
+}
+
+.heritage-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #43342d;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: #7d6e66;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Final Quote Area */
+.story-final-quote {
+    text-align: center;
+    margin-top: 100px;
+    border-top: 1px solid rgba(196, 164, 132, 0.2);
+    padding-top: 50px;
+}
+
+.story-final-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #b08d79;
+}
+
+.author {
+    display: block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    color: #43342d;
+    opacity: 0.6;
+}
+/* --- Our Story Section Styles --- */
+
+.story-section {
+    background-color: #f8f5f2; /* لون هادئ يتماشى مع الرمال */
+    padding: 160px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Visuals Layout */
+.story-visuals {
+    position: relative;
+    padding-right: 40px;
+}
+
+.main-frame {
+    position: relative;
+    width: 85%;
+    height: 600px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); /* شكل هندسي فخم */
+}
+
+.story-img-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(20%); /* لمسة تاريخية خفيفة */
+    transition: transform 1s ease;
+}
+
+.main-frame:hover .story-img-1 {
+    transform: scale(1.05);
+}
+
+.secondary-frame {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    width: 250px;
+    height: 300px;
+    border: 10px solid #f8f5f2;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 5;
+}
+
+.story-img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-years {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    background: #3e2723;
+    color: #d4a373;
+    padding: 30px;
+    text-align: center;
+    z-index: 10;
+}
+
+.experience-years .number {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.experience-years .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Content Layout */
+.story-subtitle {
+    color: #a0522d;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.story-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.italic-serif {
+    font-style: italic;
+    color: #d4a373;
+}
+
+.story-text {
+    max-width: 500px;
+}
+
+.highlight-p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: #3e2723;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.regular-p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.signature-area {
+    margin-top: 50px;
+}
+
+.signature-line {
+    width: 50px;
+    height: 1px;
+    background: #d4a373;
+    margin-bottom: 15px;
+}
+
+.founder-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #3e2723;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 100px;
+    }
+    .story-visuals {
+        padding-right: 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -697,6 +1005,106 @@
             <a href="#contact" class="cta-btn">Start Your Experience</a>
         </div>
     </section>
+    <!-- story -->
+<section class="story-section" id="our-story">
+    <div class="max-w-7xl mx-auto px-8 md:px-16">
+        <div class="story-grid">
+            
+            <div class="story-visuals">
+                <div class="main-frame">
+                    <img src="assets/img1.jpg" alt="Our Heritage" class="story-img-1">
+                    <div class="experience-years">
+                        <span class="number">15</span>
+                        <span class="label">Years of <br> Curation</span>
+                    </div>
+                </div>
+                <div class="secondary-frame">
+                    <img src="assets/img2.jpg" alt="Detail" class="story-img-2">
+                </div>
+            </div>
+
+            <div class="story-content">
+                <div class="story-header">
+                    <span class="story-subtitle">The Legacy of TripBlazers</span>
+                    <h2 class="story-title">Born from the <br><span class="italic-serif">Pulse of the Land</span></h2>
+                </div>
+                
+                <div class="story-text">
+                    <p class="highlight-p">
+                        TripBlazers wasn’t founded in an office; it was born under the starlit skies of Wadi Rum and amidst the echoing canyons of Petra.
+                    </p>
+                    <p class="regular-p">
+                        Our journey began with a simple yet profound realization: Jordan’s true essence is often missed by the casual observer. We sought to bridge the gap between the world-class traveler and the deep-rooted secrets of our kingdom.
+                    </p>
+                    <p class="regular-p">
+                        Today, we curate experiences for those who seek more than just sights—they seek a connection to history, a taste of authentic hospitality, and the luxury of absolute silence.
+                    </p>
+                </div>
+
+                <div class="signature-area">
+                    <div class="signature-line"></div>
+                    <p class="founder-name">The Visionaries behind TripBlazers</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--  -->
+<section class="story-light-immersive" id="our-story">
+    <div class="sand-ripple-overlay"></div>
+
+    <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+        
+        <div class="story-header-center">
+            <span class="heritage-label">The Heritage</span>
+            <h2 class="heritage-title">Born from the <br><span class="sand-stroke">Heart of the Desert</span></h2>
+            <div class="luxury-dot-separator">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="story-steps-container">
+            <div class="heritage-card">
+                <div class="card-count">I</div>
+                <div class="card-image-wrap">
+                    <img src="assets/img1.jpg" alt="Ancient Routes">
+                </div>
+                <div class="card-body">
+                    <h3>Ancient Routes</h3>
+                    <p>We trace the paths of prophets and traders, turning history into a private sanctuary.</p>
+                </div>
+            </div>
+
+            <div class="heritage-card active-step">
+                <div class="card-count">II</div>
+                <div class="card-image-wrap">
+                    <img src="assets/img2.jpg" alt="Starlit Canopies">
+                </div>
+                <div class="card-body">
+                    <h3>Starlit Canopies</h3>
+                    <p>Our story wasn't written in ink, but in the silence of Wadi Rum, under eternal stars.</p>
+                </div>
+            </div>
+
+            <div class="heritage-card">
+                <div class="card-count">III</div>
+                <div class="card-image-wrap">
+                    <img src="assets/why3.jpg" alt="Whispers of Generations">
+                </div>
+                <div class="card-body">
+                    <h3>Generational Soul</h3>
+                    <p>Guided by those whose blood is mixed with the sand, we offer the keys to the kingdom.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-final-quote">
+            <p>"A journey that begins in the sand and ends in the soul."</p>
+            <span class="author">— TripBlazers Founders</span>
+        </div>
+    </div>
+</section>
 
     <script>
         // Cursor

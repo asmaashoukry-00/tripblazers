@@ -87,7 +87,7 @@ window.addEventListener('scroll', () => {
     } else {
         nav.style.backgroundColor = "transparent";
         nav.style.backdropFilter = "none";
-        nav.style.padding = "24px 40px";
+        nav.style.padding = "12px 40px";
         logo.style.width = "96px";
     }
 });
@@ -147,3 +147,43 @@ window.addEventListener('scroll', () => {
         "-=0.8"
     );
 });
+// -------
+// Ensure GSAP and ScrollTrigger are registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Why Jordan Section Animations
+gsap.from("#why-jordan h2", {
+    scrollTrigger: {
+        trigger: "#why-jordan",
+        start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out"
+});
+
+gsap.from("#main-jordan-img", {
+    scrollTrigger: {
+        trigger: "#why-jordan",
+        start: "top 70%",
+    },
+    scale: 1.1,
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out"
+});
+
+gsap.from("#secondary-jordan-img", {
+    scrollTrigger: {
+        trigger: "#why-jordan",
+        start: "top 60%",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1.5,
+    delay: 0.3,
+    ease: "power2.out"
+});
+// -------

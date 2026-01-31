@@ -43,11 +43,29 @@
 <!-- hero -->
     <section class="relative h-screen w-full bg-[#f9f7f2] px-2 py-6 md:px-10 md:py-6 overflow-hidden">
     <div class="relative w-full h-full rounded-[30px] md:rounded-[50px] overflow-hidden shadow-2xl">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-black/40 z-10"></div> <video autoplay loop muted playsinline class="w-full h-full object-cover scale-105">
-                <source src="assets/jordan-adventure.mp4" type="video/mp4">
-            </video>
-        </div>
+        <div class="absolute inset-0 z-0 overflow-hidden">
+    
+    <!-- Video -->
+    <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="hero-video w-full h-full object-cover"
+    >
+        <source src="assets/jordan-adventure.mp4" type="video/mp4">
+    </video>
+
+    <!-- Cinematic Overlay -->
+    <div class="absolute inset-0 z-10 bg-gradient-to-b
+        from-black/60 via-black/35 to-black/65">
+    </div>
+
+    <!-- Grain Layer -->
+    <div class="absolute inset-0 z-20 pointer-events-none grain-layer"></div>
+
+</div>
+
 
         <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
             <h1 class="font-serif text-5xl md:text-8xl text-white leading-tight mb-6">
@@ -408,9 +426,194 @@
     </div>
 </section>
 <!--  -->
+<section id="why-jordan" class="relative py-32 bg-sand overflow-hidden">
+    <div class="absolute top-10 left-10 text-[15vw] font-serif text-[#d4a373]/[0.05] pointer-events-none select-none italic">
+    Kingdom
+</div>
 
+    <div class="max-w-7xl mx-auto px-8 md:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            
+            <div class="relative order-2 lg:order-1">
+                <div class="relative w-full aspect-[4/5] rounded-t-[200px] overflow-hidden shadow-2xl z-20" id="main-jordan-img">
+                    <img src="assets/why2.jpg" alt="Petra Grandeur" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                </div>
+                <div class="absolute -bottom-12 -right-12 w-2/3 aspect-square rounded-full overflow-hidden border-[12px] border-sand shadow-2xl z-30 hidden md:block" id="secondary-jordan-img">
+                    <img src="assets/why3.jpg" alt="Jordanian Hospitality" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute top-1/2 -left-10 transform -translate-y-1/2 bg-charcoal text-white p-8 rounded-full w-40 h-40 flex flex-col justify-center items-center text-center z-40 border border-gold shadow-2xl">
+                    <span class="text-gold font-serif text-3xl">100%</span>
+                    <span class="text-[10px] uppercase tracking-widest font-light">Authentic Lead</span>
+                </div>
+            </div>
 
+            <div class="space-y-12 order-1 lg:order-2">
+                <div class="space-y-4">
+                    <span class="text-gold tracking-[0.5em] text-xs uppercase block font-bold">The Essence of the Land</span>
+                    <h2 class="font-serif text-5xl md:text-7xl text-charcoal leading-tight">
+                        Jordan is not a Destination, <br>
+                        <span class="italic text-copper font-light">It is a Revelation.</span>
+                    </h2>
+                </div>
 
+                <div class="space-y-8">
+                    <div class="flex gap-6 group">
+                        <div class="w-px h-16 bg-gold/30 group-hover:bg-gold transition-colors duration-500"></div>
+                        <div>
+                            <h4 class="font-serif text-2xl text-charcoal mb-2 italic">The Grandeur of Petra</h4>
+                            <p class="text-gray-500 font-light leading-relaxed">Experienced with context and reverence, beyond the tourist trail.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group">
+                        <div class="w-px h-16 bg-gold/30 group-hover:bg-gold transition-colors duration-500"></div>
+                        <div>
+                            <h4 class="font-serif text-2xl text-charcoal mb-2 italic">The Celestial Silence</h4>
+                            <p class="text-gray-500 font-light leading-relaxed">The scale of Wadi Rum, interpreted through those who have called it home for generations.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group">
+                        <div class="w-px h-16 bg-gold/30 group-hover:bg-gold transition-colors duration-500"></div>
+                        <div>
+                            <h4 class="font-serif text-2xl text-charcoal mb-2 italic">Soulful Hospitality</h4>
+                            <p class="text-gray-500 font-light leading-relaxed">The warmth of a Jordanian welcome—felt deeply, never staged.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <p class="text-charcoal/70 italic font-serif text-xl border-l-4 border-gold pl-6 py-2">
+                        "Through TripBlazers, the landscape speaks, and the stories come alive."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  -->
+<section id="commitment" class="relative py-32 bg-[#0a0a0a] overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <span class="text-[#d4a373] tracking-[0.6em] text-[10px] uppercase block mb-6 font-bold">Uncompromising Standards</span>
+            <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-8">
+                Trust is Our Most <br> <span class="italic text-[#d4a373]">Valuable Currency</span>
+            </h2>
+            <div class="w-20 h-px bg-[#d4a373] mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="group relative bg-[#141414] p-10 rounded-[30px] border border-white/5 hover:border-[#d4a373]/30 transition-all duration-500 overflow-hidden shadow-2xl">
+                <div class="absolute -right-16 -top-16 w-32 h-32 bg-[#d4a373]/10 blur-[50px] group-hover:bg-[#d4a373]/20 transition-all duration-700"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mb-8 border border-[#d4a373]/30 rounded-xl flex items-center justify-center group-hover:bg-[#d4a373] transition-all duration-500">
+                        <svg class="w-6 h-6 text-[#d4a373] group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-2xl mb-4">Vetted Partnerships</h3>
+                    <p class="text-gray-400 font-light leading-relaxed group-hover:text-gray-200 transition-colors">
+                        We collaborate exclusively with properties and providers who share our obsession with detail and discretion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative bg-[#141414] p-10 rounded-[30px] border border-white/5 hover:border-[#d4a373]/30 transition-all duration-500 overflow-hidden shadow-2xl">
+                <div class="absolute -right-16 -top-16 w-32 h-32 bg-[#d4a373]/10 blur-[50px] group-hover:bg-[#d4a373]/20 transition-all duration-700"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mb-8 border border-[#d4a373]/30 rounded-xl flex items-center justify-center group-hover:bg-[#d4a373] transition-all duration-500">
+                        <svg class="w-6 h-6 text-[#d4a373] group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.14c1.89-4.829 1.19-10.307-2.125-14.506m18.132 17.653c-1.89-4.829-1.19-10.307 2.125-14.506M12 11V9m0 20c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-2xl mb-4">Expert Guardians</h3>
+                    <p class="text-gray-400 font-light leading-relaxed group-hover:text-gray-200 transition-colors">
+                        Our guides are not just licensed professionals; they are master storytellers and guardians of Jordanian heritage.
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative bg-[#141414] p-10 rounded-[30px] border border-white/5 hover:border-[#d4a373]/30 transition-all duration-500 overflow-hidden shadow-2xl">
+                <div class="absolute -right-16 -top-16 w-32 h-32 bg-[#d4a373]/10 blur-[50px] group-hover:bg-[#d4a373]/20 transition-all duration-700"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mb-8 border border-[#d4a373]/30 rounded-xl flex items-center justify-center group-hover:bg-[#d4a373] transition-all duration-500">
+                        <svg class="w-6 h-6 text-[#d4a373] group-hover:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h.293m1.414 0l1.414 1.414M11 18v.5A1.5 1.5 0 019.5 20h-3M3.7 7.036a11.037 11.037 0 019.697-3.697M19.703 16.297a11.038 11.038 0 01-9.697 3.697"></path></svg>
+                    </div>
+                    <h3 class="text-white font-serif text-2xl mb-4">Ethical Stewardship</h3>
+                    <p class="text-gray-400 font-light leading-relaxed group-hover:text-gray-200 transition-colors">
+                        We believe luxury should be sustainable. Our paths are designed to honor the earth and empower local communities.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- evidance -->
+<section class="evidence-spotlight py-24 bg-[#fdfaf6] relative overflow-hidden">
+    <div class="evidence-bg-elements"></div> <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="text-center mb-20">
+            <span class="text-[#b08d79] tracking-[0.6em] text-xs uppercase font-bold block mb-4">The Faces Behind the Journeys</span>
+            <h2 class="font-serif text-5xl md:text-6xl text-[#43342d] leading-tight">Our Global Ambassadors</h2>
+            <div class="w-20 h-0.5 bg-[#d4a373] mx-auto mt-8"></div>
+        </div>
+
+        <div class="spotlight-grid">
+            
+            <a href="guide-details-james.html" class="spotlight-item group col-span-2 row-span-2">
+                <img src="assets/img1.jpg" alt="James Wilson" class="spotlight-img">
+                <div class="spotlight-overlay">
+                    <div class="details-box">
+                        <span class="language-tag">English</span>
+                        <h3 class="guide-name">James Wilson</h3>
+                        <p class="guide-intro">Master of ancient tales and modern comfort.</p>
+                        <div class="view-profile-btn">View Profile</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="guide-details2.html" class="spotlight-item group">
+                <img src="assets/img2.jpg" alt="Marco Rossi" class="spotlight-img">
+                <div class="spotlight-overlay">
+                    <div class="details-box">
+                        <span class="language-tag">Italian</span>
+                        <h3 class="guide-name">Marco Rossi</h3>
+                        <p class="guide-intro">Bringing Roman passion to Jordanian deserts.</p>
+                        <div class="view-profile-btn">View Profile</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="guide-details-olga.html" class="spotlight-item group">
+                <img src="assets/why1.jpg" alt="Olga Petrov" class="spotlight-img">
+                <div class="spotlight-overlay">
+                    <div class="details-box">
+                        <span class="language-tag">Russian</span>
+                        <h3 class="guide-name">Olga Petrov</h3>
+                        <p class="guide-intro">The desert's warmth, told in Siberian accents.</p>
+                        <div class="view-profile-btn">View Profile</div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="guide-details-sophie.html" class="spotlight-item group col-span-2">
+                <img src="assets/why2.jpg" alt="Sophie Dubois" class="spotlight-img">
+                <div class="spotlight-overlay">
+                    <div class="details-box">
+                        <span class="language-tag">French</span>
+                        <h3 class="guide-name">Sophie Dubois</h3>
+                        <p class="guide-intro">Elegance and adventure in every French phrase.</p>
+                        <div class="view-profile-btn">View Profile</div>
+                    </div>
+                </div>
+            </a>
+
+            </div>
+    </div>
+</section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

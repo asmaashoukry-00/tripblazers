@@ -18,6 +18,19 @@ html {
     overflow: hidden;
 }
 
+/* HERO VIDEO ENHANCEMENT */
+.hero-video {
+  filter: blur(0.8px) contrast(1.06) saturate(1.12);
+  transform: scale(1.02);
+}
+
+/* Grain Effect (Luxury Look) */
+.grain-layer {
+  background-image: url("assets/grain.png");
+  opacity: 0.06;
+}
+
+
 /* الهالة الضوئية المتحركة خلف اللوجو */
 .background-glow {
     position: absolute;
@@ -42,4 +55,304 @@ html {
     filter: drop-shadow(0 20px 40px rgba(139, 101, 52, 0.15));
     opacity: 0;
     transform: scale(0.9);
+}
+/* ---- */
+    /* --- Our Story Section Styles --- */
+
+.story-section {
+    background-color: #f8f5f2; /* لون هادئ يتماشى مع الرمال */
+    padding: 160px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Visuals Layout */
+.story-visuals {
+    position: relative;
+    padding-right: 40px;
+}
+
+.main-frame {
+    position: relative;
+    width: 85%;
+    height: 600px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); /* شكل هندسي فخم */
+}
+
+.story-img-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(20%); /* لمسة تاريخية خفيفة */
+    transition: transform 1s ease;
+}
+
+.main-frame:hover .story-img-1 {
+    transform: scale(1.05);
+}
+
+.secondary-frame {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    width: 250px;
+    height: 300px;
+    border: 10px solid #f8f5f2;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 5;
+}
+
+.story-img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-years {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    background: #3e2723;
+    color: #d4a373;
+    padding: 30px;
+    text-align: center;
+    z-index: 10;
+}
+
+.experience-years .number {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.experience-years .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Content Layout */
+.story-subtitle {
+    color: #a0522d;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.story-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.italic-serif {
+    font-style: italic;
+    color: #d4a373;
+}
+
+.story-text {
+    max-width: 500px;
+}
+
+.highlight-p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: #3e2723;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.regular-p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.signature-area {
+    margin-top: 50px;
+}
+
+.signature-line {
+    width: 50px;
+    height: 1px;
+    background: #d4a373;
+    margin-bottom: 15px;
+}
+
+.founder-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #3e2723;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 100px;
+    }
+    .story-visuals {
+        padding-right: 0;
+    }
+}
+/* ---------- */
+/* --- Evidence Spotlight Section --- */
+.evidence-spotlight {
+    position: relative;
+    background-color: #fdfaf6;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.evidence-bg-elements {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+    opacity: 0.1;
+    pointer-events: none;
+    
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة لـ "المجلة" */
+    grid-auto-rows: 350px; /* ارتفاع ثابت للكروت */
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+    }
+    .spotlight-item.col-span-2 { grid-column: span 2 / span 2; }
+    .spotlight-item.row-span-2 { grid-row: span 1 / span 1; } /* ضبط للصفوف في الشاشات الصغيرة */
+}
+
+@media (max-width: 768px) {
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+    .spotlight-item.col-span-2, .spotlight-item.row-span-2 {
+        grid-column: span 1 / span 1;
+        grid-row: span 1 / span 1;
+    }
+}
+
+.spotlight-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.spotlight-item:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.spotlight-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.1); /* تأثير الصورة الجريئة */
+    transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.spotlight-item:hover .spotlight-img {
+    filter: brightness(0.9) contrast(1) sepia(0.1);
+    transform: scale(1.05);
+}
+
+.spotlight-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(67, 52, 45, 0.8) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    transition: background 0.5s ease;
+}
+
+.spotlight-item:hover .spotlight-overlay {
+    background: linear-gradient(to top, rgba(67, 52, 45, 0.9) 0%, transparent 60%);
+}
+
+.details-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.spotlight-item:hover .details-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.language-tag {
+    display: inline-block;
+    background-color: rgba(212, 163, 115, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.guide-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.guide-intro {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+.view-profile-btn {
+    background-color: #d4a373;
+    color: #43342d;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-profile-btn:hover {
+    background-color: #b08d79;
+    color: #fff;
 }
