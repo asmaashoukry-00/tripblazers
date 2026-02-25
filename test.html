@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Jordan Cultural & Red Sea Escape | TripBlazers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #fdfaf6; color: #43342d; scroll-behavior: smooth; }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Accordion Custom Styles */
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .accordion-item.active .accordion-content { max-height: 1000px; }
+        .accordion-item.active .icon-plus { transform: rotate(45deg); color: #d4a373; }
+        
+        .glass-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(212, 163, 115, 0.1); }
+        
+        /* Navbar Scrolled State */
+        #main-nav.nav-scrolled { background-color: rgba(0, 0, 0, 0.95) !important; padding: 1rem 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body>
+
+<nav id="main-nav" class="fixed top-0 left-0 w-full z-[1000] px-4 py-6 transition-all duration-500 ease-in-out bg-black/80">
+    <div class="max-w-7xl mx-auto flex justify-between items-center transition-all duration-500">
+        <div class="w-24 transition-all duration-500">
+            <img src="assets/logo.png" alt="TripBlazers" class="w-full filter drop-shadow-lg">
+        </div>
+        
+        <ul class="hidden md:flex items-center gap-12 text-white font-light tracking-widest text-sm uppercase">
+            <li><a href="index.html" class="hover:text-[#d4a373] transition-colors">Home</a></li>
+            <li><a href="index.html#journeys" class="hover:text-[#d4a373] transition-colors">Experiences</a></li>
+            <li>
+                <a href="#contact" class="bg-[#d4a373] text-black px-8 py-3 rounded-full font-semibold hover:bg-white transition-all duration-500 shadow-lg">
+                    Begin Journey
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="relative pt-60 pb-32 bg-[#1a1a1a] overflow-hidden">
+    <div class="absolute inset-0 opacity-50">
+        <img src="assets/hero-journey.jpg" class="w-full h-full object-cover" alt="Jordan Landscape">
+    </div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <span class="text-[#d4a373] tracking-[0.6em] text-[11px] uppercase block mb-6 font-bold">TripBlazers Signature</span>
+        <h1 class="font-serif text-5xl md:text-8xl text-white leading-tight mb-8">
+            The Cultural <br><span class="italic text-[#d4a373] font-light">& Red Sea Escape</span>
+        </h1>
+        <p class="text-white/80 text-lg font-light max-w-2xl leading-relaxed">
+            A 7-day masterclass in discovery, balancing the historical depth of the Levant with the tranquil luxury of the Red Sea coast.
+        </p>
+    </div>
+</section>
+
+<section class="py-12 glass-card border-b border-[#d4a373]/20">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Duration</h4>
+            <p class="font-serif text-2xl italic">07 Days</p>
+        </div>
+        <div>
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Language</h4>
+            <p class="font-serif text-2xl italic">Native Experts</p>
+        </div>
+        <div>
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Location</h4>
+            <p class="font-serif text-2xl italic">Kingdom of Jordan</p>
+        </div>
+        <div>
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Vibe</h4>
+            <p class="font-serif text-2xl italic">History & Sea</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-32 bg-[#fdfaf6]">
+    <div class="max-w-4xl mx-auto px-8">
+        <h2 class="font-serif text-5xl text-center mb-20">The Detailed Itinerary</h2>
+        
+        <div class="space-y-6">
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 01</span>
+                        Arrival & Majestic Welcome
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        Experience the seamless transition into Jordanian hospitality. Upon arrival at Queen Alia Airport, our concierge team handles your logistics while you prepare for a refined evening in Amman's finest quarters.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 02</span>
+                        Echoes of Rome: Jerash & Citadel
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        Discover the "Pompeii of the East" at Jerash, where Roman colonnaded streets remain frozen in time. Conclude the day at the Amman Citadel, witnessing a sunset that bridges the gap between antiquity and the modern capital.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 03</span>
+                        Spiritual Heights & The Dead Sea
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        From the mosaics of Madaba to the panoramic views from Mount Nebo. Finish your day at the Dead Sea, rejuvenating in mineral-rich waters at the lowest point on Earth.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 04</span>
+                        Dana: Nature's Grand Theater
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        Venture into the Dana Biosphere Reserve. Witness the raw beauty of Jordan’s diverse ecology and ancient geology, a perfect prelude to the desert wonders awaiting you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 05</span>
+                        Petra: The Rose-Red Revelation
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        A full day immersion in the UNESCO World Heritage site. Walk through the Siq to behold the Treasury and explore the sprawling tombs of the Nabataean Empire.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 06</span>
+                        Wadi Rum: The Silent Desert
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        4x4 exploration of the Martian landscapes of Wadi Rum. An authentic Bedouin experience followed by a night under a canopy of desert stars.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item glass-card rounded-2xl px-8 shadow-sm">
+                <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-10 text-left group">
+                    <span class="font-serif text-3xl text-[#43342d] group-hover:text-[#d4a373] transition-colors">
+                        <span class="italic text-[#d4a373]/50 mr-6 font-light">Day 07</span>
+                        Red Sea Bliss & Farewell
+                    </span>
+                    <span class="icon-plus text-3xl font-light transition-transform duration-500">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p class="pb-10 border-t border-[#d4a373]/10 pt-8 text-gray-600 leading-relaxed font-light">
+                        Conclude in Aqaba by the crystal waters of the Red Sea. Enjoy leisure time for snorkeling or relaxation before our team transfers you for your final departure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-32 bg-[#43342d] text-white overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+            
+            <div class="space-y-12">
+                <div class="flex items-center gap-6">
+                    <h3 class="font-serif text-5xl italic text-[#d4a373]">Inclusions</h3>
+                    <div class="flex-grow h-px bg-[#d4a373]/20"></div>
+                </div>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <span class="w-6 h-6 rounded-full border border-[#d4a373] flex items-center justify-center text-[#d4a373] text-[10px] mt-1 italic">✓</span>
+                        <p class="text-white/70 font-light">Elite assistance and VIP greetings upon airport arrival.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="w-6 h-6 rounded-full border border-[#d4a373] flex items-center justify-center text-[#d4a373] text-[10px] mt-1 italic">✓</span>
+                        <p class="text-white/70 font-light">Private luxury transit in modern, climate-controlled vehicles.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="w-6 h-6 rounded-full border border-[#d4a373] flex items-center justify-center text-[#d4a373] text-[10px] mt-1 italic">✓</span>
+                        <p class="text-white/70 font-light">Half-board stays in hand-picked luxury accommodations.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="w-6 h-6 rounded-full border border-[#d4a373] flex items-center justify-center text-[#d4a373] text-[10px] mt-1 italic">✓</span>
+                        <p class="text-white/70 font-light">Professional multilingual experts throughout the journey.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-12">
+                <div class="flex items-center gap-6">
+                    <h3 class="font-serif text-5xl italic text-white/30">Exclusions</h3>
+                    <div class="flex-grow h-px bg-white/10"></div>
+                </div>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/40 text-[10px] mt-1">✕</span>
+                        <p class="text-white/50 font-light">International flight tickets and global travel insurance.</p>
+                    </li>
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/40 text-[10px] mt-1">✕</span>
+                        <p class="text-white/50 font-light">Personal curio purchases and non-specified beverages.</p>
+                    </li>
+                    <li class="flex items-start gap-4 opacity-50">
+                        <span class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/40 text-[10px] mt-1">✕</span>
+                        <p class="text-white/50 font-light">Gratuities for guides, drivers, and service staff.</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="py-24 text-center bg-[#fdfaf6]">
+    <div class="max-w-xl mx-auto">
+        <h2 class="font-serif text-5xl text-[#43342d] mb-12 italic">Your Narrative Begins Here</h2>
+        <a href="contact.html" class="inline-block bg-[#d4a373] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-[#43342d] hover:text-white transition-all duration-500 shadow-2xl">
+            Reserve This Experience
+        </a>
+    </div>
+</footer>
+
+<script>
+    // Accordion Control
+    function toggleAccordion(element) {
+        const item = element.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+    }
+
+    // Navbar Scroll Logic
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('main-nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>
