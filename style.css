@@ -10,7 +10,8 @@ html {
 #preloader {
     position: fixed;
     inset: 0;
-    background-color: #fcfbf8; /* خلفية فاتحة راقية */
+    background-color: #fcfbf8; 
+    /* background-color: #0a0a0a;  */
     z-index: 10000;
     display: flex;
     justify-content: center;
@@ -28,6 +29,9 @@ html {
 .grain-layer {
   background-image: url("assets/grain.png");
   opacity: 0.06;
+}
+.hero-video {
+  box-shadow: 0 40px 120px rgba(0,0,0,.45);
 }
 
 
