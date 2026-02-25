@@ -7,6 +7,40 @@ section > div {
 html {
     scroll-behavior: smooth;
 }
+/* navbar */
+/* تحويل البرجر لـ X */
+#menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #d4a373;
+}
+
+#menu-toggle.active span:nth-child(2) {
+    opacity: 0; /* إخفاء الشرطة اللي في النص */
+}
+
+#menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #d4a373;
+}
+
+
+#mobile-overlay.open {
+    transform: translateY(0);
+}
+
+
+.mobile-link {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+#mobile-overlay.open .mobile-link {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
 #preloader {
     position: fixed;
     inset: 0;

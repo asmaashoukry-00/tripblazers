@@ -23,23 +23,39 @@
 
     <!-- <div class="cursor"></div> -->
      <!-- navbar -->
-<nav id="main-nav" class="fixed top-0 left-0 w-full z-[1000] px-4 py-6 transition-all duration-500 ease-in-out">
-    <div class="max-w-7xl mx-auto flex justify-between items-center transition-all duration-500" id="nav-container">
-        <div class="w-24 transition-all duration-500" id="nav-logo">
+<nav id="main-nav" class="fixed top-0 left-0 w-full z-[1100] px-6 py-5 transition-all duration-500">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="w-20 md:w-24 relative z-[1200]">
             <img src="assets/logo.png" alt="TripBlazers" class="w-full filter drop-shadow-lg">
         </div>
         
-        <ul class="hidden md:flex items-center gap-12 text-white font-light tracking-widest text-sm uppercase">
+        <ul class="hidden md:flex items-center gap-8 text-white font-light tracking-widest text-[11px] uppercase">
             <li><a href="#philosophy" class="hover:text-[#d4a373] transition-colors">Philosophy</a></li>
             <li><a href="#experiences" class="hover:text-[#d4a373] transition-colors">Experiences</a></li>
-            <li>
-                <a href="#contact" class="bg-[#d4a373] text-black px-8 py-3 rounded-full font-semibold hover:bg-white transition-all duration-500 shadow-lg">
-                    Begin Journey
-                </a>
-            </li>
+            <li><a href="#philosophy-pillars" class="hover:text-[#d4a373] transition-colors">DNA</a></li>
+            <li><a href="#why-jordan" class="hover:text-[#d4a373] transition-colors">Why Jordan</a></li>
+            <li><a href="#journeys" class="hover:text-[#d4a373] transition-colors">Journeys</a></li>
+            <li><a href="#contact" class="bg-[#d4a373] text-black px-6 py-2.5 rounded-full font-bold hover:bg-white transition-all text-[10px]">Begin Journey</a></li>
         </ul>
+
+        <div class="md:hidden cursor-pointer flex flex-col gap-1.5 z-[1200]" id="menu-toggle">
+            <span class="w-8 h-[2px] bg-white transition-all duration-300"></span>
+            <span class="w-8 h-[2px] bg-white transition-all duration-300"></span>
+            <span class="w-8 h-[2px] bg-white transition-all duration-300 "></span>
+        </div>
     </div>
 </nav>
+
+<div id="mobile-overlay" class="fixed inset-0 bg-black/95 z-[1050] flex flex-col items-center justify-center translate-y-[-100%] transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)]">
+    <ul class="text-center space-y-8">
+        <li><a href="#philosophy" class="mobile-link text-3xl font-serif text-white italic">Philosophy</a></li>
+        <li><a href="#experiences" class="mobile-link text-3xl font-serif text-white italic">Experiences</a></li>
+        <li><a href="#philosophy-pillars" class="mobile-link text-3xl font-serif text-white italic">DNA</a></li>
+        <li><a href="#why-jordan" class="mobile-link text-3xl font-serif text-white italic">Why Jordan</a></li>
+        <li><a href="#journeys" class="mobile-link text-3xl font-serif text-white italic">Journeys</a></li>
+        <li class="pt-4"><a href="#contact" class="mobile-link bg-[#d4a373] text-black px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest">Begin Journey</a></li>
+    </ul>
+</div>
 <!-- hero -->
     <section class="relative h-screen w-full bg-[#f9f7f2] px-2 py-6 md:px-10 md:py-6 overflow-hidden">
     <div class="relative w-full h-full rounded-[30px] md:rounded-[50px] overflow-hidden shadow-2xl">

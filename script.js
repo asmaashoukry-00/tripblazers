@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const body = document.body;
+    const links = document.querySelectorAll('.mobile-link');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mobileOverlay.classList.toggle('open');
+        
+        if (mobileOverlay.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            mobileOverlay.classList.remove('open');
+            body.style.overflow = 'auto';
+        });
+    });
+});
 /**
  * TripBlazers Luxury Reveal - Integrated Manifesto
  */
