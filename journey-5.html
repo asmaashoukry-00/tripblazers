@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Journey Jordan | TripBlazers Exclusive</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="assets/fav-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Montserrat:wght@200;400;600&family=Playfair+Display:serif&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                sand: '#fdfaf6', 
+                copper: '#b08d79', 
+                gold: '#d4a373', 
+                dark: '#43342d', 
+              },
+              fontFamily: {
+                serif: ['Cormorant Garamond', 'serif'],
+                sans: ['Montserrat', 'sans-serif'],
+              }
+            }
+          }
+        }
+    </script>
+    
+    <style>
+        /* 1. GLOBAL STYLES */
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #fefcf8; 
+            color: #1a1a1a; 
+            overflow-x: hidden; 
+        }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .standard-px { padding-left: 5%; padding-right: 5%; }
+        @media (min-width: 1280px) { .standard-px { padding-left: 8%; padding-right: 8%; } }
+
+        /* 2. ACCORDION STYLES */
+        .accordion-content { max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0; }
+        .accordion-item.active .accordion-content { max-height: 800px; opacity: 1; padding-bottom: 2rem; }
+        .accordion-item.active .icon-plus { transform: rotate(45deg); color: #d4a373; }
+        .glass-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(212, 163, 115, 0.1); }
+
+        /* 3. SOCIAL STAMP FOOTER */
+        .social-stamp {
+            display: flex; align-items: center; gap: 0; padding: 8px;
+            border: 1px solid rgba(212, 163, 115, 0.2); border-radius: 50px;
+            overflow: hidden; max-width: 40px; white-space: nowrap;
+            transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1); background: transparent; text-decoration: none;
+        }
+        .stamp-icon {
+            min-width: 22px; height: 22px; display: flex; justify-content: center; align-items: center;
+            color: rgba(255, 255, 255, 0.5); transition: color 0.4s ease; font-size: 14px;
+        }
+        .stamp-text {
+            font-family: 'Montserrat', sans-serif; font-size: 10px; text-transform: uppercase;
+            letter-spacing: 2px; color: #d4a373; opacity: 0; transform: translateX(10px);
+            transition: all 0.5s ease; margin-left: 8px;
+        }
+        .social-stamp:hover { max-width: 160px; background: rgba(212, 163, 115, 0.05); border-color: #d4a373; padding-right: 20px; padding-left: 15px; }
+        .social-stamp:hover .stamp-icon { color: #d4a373; }
+        .social-stamp:hover .stamp-text { opacity: 1; transform: translateX(0); }
+
+        .footer-link { position: relative; transition: color 0.3s ease; }
+        .footer-link:hover { color: #d4a373; }
+
+        /* 4. HERO MASK */
+        .hero-img-container { clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); }
+        .whatsapp-luxury {
+            position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px;
+            background-color: #d4a373; color: #1a1a1a; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; z-index: 2000;
+            transition: all 0.5s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .whatsapp-luxury:hover { background-color: #25d366; color: white; transform: scale(1.1) rotate(10deg); }
+        .wa-ripple { position: absolute; width: 100%; height: 100%; border: 1px solid #d4a373; border-radius: 50%; animation: wa-pulse 2s infinite; }
+        .whatsapp-luxury:hover .wa-ripple { border-color: #25d366; }
+        @keyframes wa-pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.8); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+<nav class="fixed top-0 left-0 w-full z-[1000] py-4 transition-all duration-500 bg-black/90 backdrop-blur-md">
+    <div class="standard-px flex justify-between items-center">
+        <a href="index.html" class="w-16 md:w-20 transition-transform hover:scale-105">
+            <img src="assets/logo.png" alt="TripBlazers" class="w-full">
+        </a>
+        <a href="#book" class="bg-[#d4a373] text-black px-6 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-white transition-all shadow-xl">
+            Book Now
+        </a>
+    </div>
+</nav>
+
+<section class="relative pt-40 pb-24 overflow-hidden">
+    <div class="standard-px">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 z-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="h-px w-12 bg-[#d4a373]"></span>
+                    <span class="text-[#d4a373] tracking-[0.4em] text-[11px] uppercase font-bold">About this tour</span>
+                </div>
+                <h1 class="font-serif text-4xl md:text-7xl text-[#43342d] leading-[1.1] mb-8">
+                    Spiritual Journey: <br><span class="italic text-[#d4a373] font-light">All Shrines Tour</span>
+                </h1>
+                <div class="max-w-xl space-y-6">
+                    <p class="text-[#43342d] text-lg leading-relaxed font-light">
+                        An extraordinary journey through the spiritual and historical heart of Jordan. This 8-day tour takes you to the most revered shrines, tombs, and sacred sites across the country.
+                    </p>
+                    <p class="text-[#43342d]/70 text-md leading-relaxed border-l-2 border-[#d4a373]/30 pl-6 italic font-light">
+                        Experience a seamless blend of historical exploration and spiritual reflection, connecting with ancient civilizations and stunning sacred landscapes.
+                    </p>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="hero-img-container shadow-2xl overflow-hidden group">
+                    <img src="assets/why3.jpg" alt="Shrines Jordan" class="w-full h-[400px] object-cover transition-transform duration-1000 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 border-y border-[#d4a373]/10 bg-white/30">
+    <div class="standard-px grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="group">
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Durations</h4>
+            <p class="font-serif text-2xl italic">8 Days</p>
+        </div>
+        <div class="group border-l border-[#d4a373]/10">
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Language</h4>
+            <p class="font-serif text-2xl italic">English</p>
+        </div>
+        <div class="group border-l border-[#d4a373]/10">
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Location</h4>
+            <p class="font-serif text-2xl italic">Jordan</p>
+        </div>
+        <div class="group border-l border-[#d4a373]/10">
+            <h4 class="text-[10px] uppercase tracking-[0.3em] text-[#b08d79] mb-2 font-bold">Experience</h4>
+            <p class="font-serif text-2xl italic">Religious Shrines</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-[#fdfaf6]">
+    <div class="standard-px">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-5xl text-center mb-16 italic text-[#d4a373]">Itinerary</h2>
+            
+            <div class="space-y-4">
+                <div class="accordion-item active glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 1</span>
+                            Arrival in Amman
+                        </span>
+                        <span class="icon-plus text-2xl font-light transition-transform duration-500 text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Dinner & Overnight stay</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Meet and greet at Queen Alia International Airport, assistance by representatives, and transfer to your hotel in the capital.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 2</span>
+                            Cave of Sleepers & Al Salt
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Sacred Tombs</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Visit the Cave of the Sleepers, Maqam Hazrat Bilal Al Habashi, and proceed to Al Salt for Maqam Prophet Shoaib and Prophet Ayyub.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 3</span>
+                            Mt. Nebo & Jordan Valley
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Panoramic Views</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Explore Mt. Nebo with views of the Dead Sea. Visit the tombs of Abu baydah Amer bin Al-Jarrah and Muath bin Jabal in the valley.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 4</span>
+                            Jerash - Ajloun - Irbid
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Northern Heritage</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Visit Maqam Al Nabi Houd in Jerash, Ajloun Castle, and Maqam Abu Al Dardah in Irbid before returning to Amman.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 5</span>
+                            Kerak & Al Mazar Al Janobi
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Southern Shrines</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Visit the tombs of Nabi Noah and Ja’afar bin Abi Talib in Al Mazar Al Janobi. Transfer to Petra for overnight.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 6</span>
+                            Petra Full Day Visit
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Nabatean Capital</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Discover the rose-red city of Petra. Walk the Siq, see the Treasury, and marvel at temples carved into the sandstone cliffs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 7</span>
+                            Wadi Arava & Lot’s Cave
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Biblical History</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Drive through Wadi Arava to visit Lot’s Cave, reflecting Jordan's rich biblical and spiritual heritage. Return to Amman.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card rounded-3xl px-8 transition-all hover:bg-white">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center py-8 text-left group">
+                        <span class="font-serif text-2xl md:text-3xl text-[#43342d]">
+                            <span class="italic text-[#d4a373]/40 mr-4 font-light tracking-tighter">Day 8</span>
+                            Amman Airport Departure
+                        </span>
+                        <span class="icon-plus text-2xl font-light text-[#d4a373]">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="pb-6 border-t border-[#d4a373]/10 pt-6 space-y-4">
+                            <p class="text-[#d4a373] tracking-widest text-[10px] uppercase font-bold">Final Farewell</p>
+                            <p class="text-dark/70 leading-relaxed font-light">Transfer to Queen Alia International Airport for final departure assisted by our coordinator.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-[#FDFBF9] relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-full opacity-[0.03] pointer-events-none">
+        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#d4a373" d="M0,224L48,202.7C96,181,192,139,288,138.7C384,139,480,181,576,186.7C672,192,768,160,864,138.7C960,117,1056,107,1152,117.3C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white shadow-[0_25px_60px_rgba(45,36,32,0.15)] rounded-[40px] overflow-hidden border border-[#d4a373]/20">
+            <div class="p-10 md:p-16 lg:border-r border-[#d4a373]/15 bg-white">
+                <div class="flex items-center gap-5 mb-12">
+                    <div class="w-12 h-12 rounded-xl bg-[#d4a373]/10 flex items-center justify-center border border-[#d4a373]/30">
+                        <span class="text-[#d4a373] font-bold text-2xl">🗸</span>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-4xl text-[#2d2420] tracking-wide italic leading-none">Included</h3>
+                        <div class="w-12 h-0.5 bg-[#d4a373] mt-2"></div>
+                    </div>
+                </div>
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4 group">
+                        <span class="text-[#d4a373] font-bold text-lg transition-transform group-hover:scale-125">🗸</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">Assistance at Airport on arrival & departure.</p>
+                    </li>
+                    <li class="flex items-start gap-4 group">
+                        <span class="text-[#d4a373] font-bold text-lg transition-transform group-hover:scale-125">🗸</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">Transportation in A/C modern vehicle with English driver.</p>
+                    </li>
+                    <li class="flex items-start gap-4 group">
+                        <span class="text-[#d4a373] font-bold text-lg transition-transform group-hover:scale-125">🗸</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">English speaking local guides in Petra, Jerash & Amman.</p>
+                    </li>
+                    <li class="flex items-start gap-4 group">
+                        <span class="text-[#d4a373] font-bold text-lg transition-transform group-hover:scale-125">🗸</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">Entrance fees to all sites mentioned in the program.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-10 md:p-16 bg-[#FAF8F5]">
+                <div class="flex items-center gap-5 mb-12">
+                    <div class="w-12 h-12 rounded-xl bg-[#2d2420]/5 flex items-center justify-center border border-[#2d2420]/10">
+                        <span class="text-[#b07d62] font-bold text-2xl">✕</span>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-4xl text-[#2d2420]/60 tracking-wide italic leading-none">Excluded</h3>
+                        <div class="w-12 h-0.5 bg-[#b07d62]/30 mt-2"></div>
+                    </div>
+                </div>
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4 group opacity-70">
+                        <span class="text-[#b07d62] font-bold text-lg transition-transform group-hover:rotate-90">✕</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">International Flight tickets.</p>
+                    </li>
+                    <li class="flex items-start gap-4 group opacity-70">
+                        <span class="text-[#b07d62] font-bold text-lg transition-transform group-hover:rotate-90">✕</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">Lunches en route & personal items.</p>
+                    </li>
+                    <li class="flex items-start gap-4 group opacity-70">
+                        <span class="text-[#b07d62] font-bold text-lg transition-transform group-hover:rotate-90">✕</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">Tips for guide, driver and portage.</p>
+                    </li>
+                    <li class="flex items-start gap-4 group opacity-70">
+                        <span class="text-[#b07d62] font-bold text-lg transition-transform group-hover:rotate-90">✕</span>
+                        <p class="text-[#2d2420] text-[15px] font-medium leading-snug">Drinks on meals & optional activities.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 text-center bg-white">
+    <div class="standard-px">
+        <div class="max-w-2xl mx-auto space-y-8">
+            <p class="text-gold text-[11px] tracking-[0.6em] uppercase font-bold">Seek the Sacred</p>
+            <h2 class="font-serif text-5xl md:text-7xl text-dark leading-tight">Ready to craft <br><span class="italic font-light">your narrative?</span></h2>
+            <div class="pt-8">
+                <a href="https://wa.me/962791111608" class="inline-block bg-gold text-black px-12 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-gold hover:text-black transition-all duration-500 shadow-2xl">
+                    Request Bespoke Proposal
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#1a1a1a] pt-24 pb-12 text-white/90 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+            <div class="space-y-10">
+                <img src="assets/logo.png" alt="TripBlazers" class="w-32 opacity-90">
+                <p class="text-[12px] leading-relaxed text-white/50 max-w-xs">Architects of movement and guardians of Jordanian heritage.</p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#" class="social-stamp">
+                        <span class="stamp-icon"><i class="fab fa-instagram"></i></span>
+                        <span class="stamp-text">Instagram</span>
+                    </a>
+                    <a href="#" class="social-stamp">
+                        <span class="stamp-icon"><i class="fab fa-facebook-f"></i></span>
+                        <span class="stamp-text">Facebook</span>
+                    </a>
+                    <a href="#" class="social-stamp">
+                        <span class="stamp-icon"><i class="fa-brands fa-x-twitter"></i></span>
+                        <span class="stamp-text">Twitter</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h4 class="text-[#d4a373] font-serif text-xl italic tracking-wide">Explore</h4>
+                <ul class="text-[11px] uppercase tracking-[3px] space-y-5 text-white/60">
+                    <li><a href="#" class="footer-link">Philosophy</a></li>
+                    <li><a href="#" class="footer-link">Experiences</a></li>
+                    <li><a href="#" class="footer-link">Journeys</a></li>
+                </ul>
+            </div>
+            <div class="space-y-8">
+                <h4 class="text-[#d4a373] font-serif text-xl italic tracking-wide">Connect</h4>
+                <div class="text-[11px] leading-[2.2] uppercase tracking-[2px] text-white/60">
+                    <p>Amman, Jordan</p>
+                    <p class="mt-4">incoming@tripblazers.com</p>
+                    <p>+962 79 111 1608</p>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h4 class="text-[#d4a373] font-serif text-xl italic tracking-wide">Newsletter</h4>
+                <p class="text-[11px] text-white/40 uppercase tracking-widest leading-relaxed">Join our inner circle for travel insights.</p>
+            </div>
+        </div>
+        <div class="pt-12 border-t border-white/5 text-center">
+            <span class="text-[9px] tracking-[4px] uppercase text-white/20">© 2026 TripBlazers. Crafted with Elegance.</span>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/962791111608" target="_blank" class="whatsapp-luxury shadow-2xl">
+    <div class="wa-ripple"></div>
+    <svg class="w-6 h-6 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+    function toggleAccordion(button) {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(acc => acc.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

@@ -212,3 +212,167 @@ gsap.from("#secondary-jordan-img", {
     ease: "power2.out"
 });
 // -------
+let currentTesti = 1;
+const totalTestis = 2; // غيري الرقم حسب عدد الآراء عندك
+
+function showTestimonial(n) {
+    // إخفاء الكل
+    document.querySelectorAll('.testimonial-content').forEach(el => {
+        el.style.opacity = '0';
+        setTimeout(() => el.classList.add('hidden'), 400);
+    });
+    
+    // إظهار المطلوب
+    setTimeout(() => {
+        const active = document.getElementById(`testi-${n}`);
+        active.classList.remove('hidden');
+        setTimeout(() => active.style.opacity = '1', 50);
+    }, 450);
+}
+
+function nextTestimonial() {
+    currentTesti = currentTesti >= totalTestis ? 1 : currentTesti + 1;
+    showTestimonial(currentTesti);
+}
+
+function prevTestimonial() {
+    currentTesti = currentTesti <= 1 ? totalTestis : currentTesti - 1;
+    showTestimonial(currentTesti);
+}
+// journeys
+document.addEventListener('DOMContentLoaded', () => {
+    const pages = document.querySelectorAll('.journey-page');
+    const pageNums = document.querySelectorAll('.pagination-num');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentPage = 1;
+
+    function updatePagination(targetPage) {
+        currentPage = parseInt(targetPage);
+
+        // 1. تبديل ظهور الصفحات
+        pages.forEach(page => {
+            if (page.dataset.page == currentPage) {
+                page.classList.remove('hidden');
+            } else {
+                page.classList.add('hidden');
+            }
+        });
+
+        // 2. تحديث شكل الأرقام (Active State)
+        pageNums.forEach(num => {
+            if (num.dataset.target == currentPage) {
+                num.classList.add('active', 'text-[#d4a373]', 'border-b', 'border-[#d4a373]');
+                num.classList.remove('text-[#43342d]/40');
+            } else {
+                num.classList.remove('active', 'text-[#d4a373]', 'border-b', 'border-[#d4a373]');
+                num.classList.add('text-[#43342d]/40');
+            }
+        });
+
+        // 3. تحديث حالة الأسهم (Disable/Enable)
+        if (currentPage === 1) {
+            prevBtn.classList.add('opacity-30', 'cursor-not-allowed');
+            nextBtn.classList.remove('opacity-30', 'cursor-not-allowed');
+        } else {
+            prevBtn.classList.remove('opacity-30', 'cursor-not-allowed');
+            nextBtn.classList.add('opacity-30', 'cursor-not-allowed');
+        }
+        
+        // Scroll بسيط للأعلى عشان المستخدم يشوف بداية الكروت الجديدة
+        document.querySelector('.journeys-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // إضافة Event Listeners للأرقام
+    pageNums.forEach(num => {
+        num.addEventListener('click', () => updatePagination(num.dataset.target));
+    });
+
+    // السهم التالي
+    nextBtn.addEventListener('click', () => {
+        if (currentPage < pages.length) updatePagination(currentPage + 1);
+    });
+
+    // السهم السابق
+    prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) updatePagination(currentPage - 1);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. منع المتصفح من محاولة استعادة السكرول تلقائياً عشان ميحصلش "تخريف"
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    const pages = document.querySelectorAll('.journey-page');
+    const pageNums = document.querySelectorAll('.pagination-num');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    // دالة التحديث الأساسية
+    function updateUI(activePage) {
+        const pageNum = parseInt(activePage) || 1;
+        pages.forEach(p => p.classList.toggle('hidden', p.dataset.page != pageNum));
+        
+        pageNums.forEach(btn => {
+            const isActive = btn.dataset.target == pageNum;
+            btn.classList.toggle('active', isActive);
+            btn.classList.toggle('text-[#d4a373]', isActive);
+            btn.classList.toggle('border-b', isActive);
+            btn.classList.toggle('border-[#d4a373]', isActive);
+            btn.classList.toggle('text-[#43342d]/40', !isActive);
+        });
+
+        localStorage.setItem('lastJourneyPage', pageNum);
+    }
+
+    // --- الجزء السحري لحل مشكلة الـ Back ---
+    
+    // عند الضغط على أي لينك رحلة، بنسجل السكرول فوراً
+    document.addEventListener('click', (e) => {
+        const cardLink = e.target.closest('.journey-portfolio-card a');
+        if (cardLink) {
+            localStorage.setItem('scrollPos', window.scrollY);
+        }
+    });
+
+    // استعادة الصفحة والسكرول عند التحميل
+    const savedPage = localStorage.getItem('lastJourneyPage') || 1;
+    updateUI(savedPage);
+
+    const savedScroll = localStorage.getItem('scrollPos');
+    if (savedScroll) {
+        // بنستخدم window.onload عشان نضمن إن كل الصور والسكاشن (الهيرو وغيره) خدت مساحتها الحقيقية
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: parseInt(savedScroll),
+                    behavior: 'instant' // 'instant' أحسن هنا عشان ميحصلش Jump قدام عين اليوزر
+                });
+                localStorage.removeItem('scrollPos');
+            }, 50); 
+        });
+    }
+
+    // --- التحكم في الـ Pagination ---
+    function goToPage(num) {
+        updateUI(num);
+        document.querySelector('.journeys-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    pageNums.forEach(btn => {
+        btn.addEventListener('click', () => goToPage(btn.dataset.target));
+    });
+
+    // إضافة منطق الأسهم (Next/Prev)
+    nextBtn.addEventListener('click', () => {
+        const current = parseInt(localStorage.getItem('lastJourneyPage') || 1);
+        if (current < pages.length) goToPage(current + 1);
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const current = parseInt(localStorage.getItem('lastJourneyPage') || 1);
+        if (current > 1) goToPage(current - 1);
+    });
+});
